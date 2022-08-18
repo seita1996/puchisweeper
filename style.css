@@ -1,0 +1,113 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
+main {
+  margin-top: 20px;
+}
+
+/* setting */
+#setting {
+  width: 290px;
+  margin: 0 auto;
+}
+#text {
+  width: 290px;
+  margin: 0 auto;
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+#text h1 {
+  color: yellowgreen;
+  margin: 0;
+}
+#text h3 {
+  margin: 0;
+}
+#text p {
+  margin: 3px 0;
+}
+#setting2 {
+  display: flex;
+  width: 290px;
+  margin: 0 auto;
+}
+#btn {
+  width: 100%;
+  margin: 3px auto;
+  padding: 2px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border: solid 1px black;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.timer::before {
+  line-height: 30px;
+  font-size: 24px;
+  font-family: "Material Icons Outlined";
+  content: "\e425";
+}
+
+/* game */
+#h,
+#w,
+#b {
+  width: 50px;
+}
+#board {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: yellowgreen;
+}
+td {
+  border: solid 3px white;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.open {
+  background: #e6e6e6;
+  animation: fadein 0.7s;
+}
+.flag::before {
+  font-family: "Material Icons";
+  content: "\e153";
+  animation: fadein 0.3s;
+}
+.bomb {
+  background: red;
+  animation: fadein 1s infinite;
+}
+.bomb::before {
+  font-family: "Material Icons";
+  content: "\ea0b";
+}
+.clear {
+  background: pink;
+  animation: fadein 5s infinite;
+}
+.clear::before {
+  font-family: "Material Icons";
+  content: "\e545";
+}
+.bombCount::before {
+  font-size: 24px;
+  font-family: "Material Icons";
+  content: "\ea0b";
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#result {
+  text-align: center;
+}

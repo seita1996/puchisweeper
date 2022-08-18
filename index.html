@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マインスイーパー</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div id="setting">
+            W
+            <input type="number" id="w" value="9" min="2" max="50">
+            H
+            <input type="number" id="h" value="9" min="2" max="25">
+            B
+            <input type="number" id="b" value="10" min="1" max="1250">
+            <span class="bombCount">0</span>
+        </div>
+        <div id="setting2">
+            <div id="btn">
+                START
+            </div>
+            <span id="time" class="timer">000</span>
+        </div>
+        <table id="board">
+        </table>
+        <h3 id="result"></h3>
+        <div id="text">
+            <h3>
+                <設定>
+            </h3>
+            <p>W: 横のマスの数</p>
+            <p>H: 縦のマスの数</p>
+            <p>B: 爆弾の数</p>
+            <h3>
+                <操作>
+            </h3>
+            <p>左クリック: マスを開ける</p>
+            <p>右クリック: <span class="flag"></span>マークを付ける</p>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
