@@ -75,8 +75,8 @@ main {
 }
 td {
   border: solid 3px white;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   font-weight: bold;
   text-align: center;
 }
@@ -139,20 +139,20 @@ td {
 
 .puchi {
   opacity: 0.5;
-  width: 500px;
+  width: 100px;
 }
 
 .alive {
   object-fit: cover;
-  width: 250px;
-  height: 250px;
+  width: 50px;
+  height: 50px;
   object-position: 0%0%;
 }
 
 .dead {
   object-fit: cover;
-  width: 270px;
-  height: 250px;
+  width: 55px;
+  height: 50px;
   object-position: 100%100%;
 }
 
