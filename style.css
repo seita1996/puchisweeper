@@ -71,7 +71,7 @@ main {
 #board {
   margin: 0 auto;
   border-collapse: collapse;
-  background: yellowgreen;
+  /* background: yellowgreen; */
 }
 td {
   border: solid 3px white;
@@ -79,6 +79,8 @@ td {
   height: 50px;
   font-weight: bold;
   text-align: center;
+  background-image: url(images/puchi50.png);
+  opacity: .5;
 }
 .open {
   background: #e6e6e6;
