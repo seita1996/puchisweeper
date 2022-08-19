@@ -87,10 +87,13 @@ function putBomb() {
 // 左クリック マスを空ける
 function leftClicked() {
   // プチ音を鳴らす
-  puchiAudio.play();
+  if(!puchiAudio.paused) {
+    puchiAudio.pause()
+  }
+  puchiAudio.play()
 
   // iOS/Androidで次回再生が安定しないので初期化
-  puchiAudio = new Audio( puchiAudio.src );
+  // puchiAudio = new Audio( puchiAudio.src );
 
   const y = this.parentNode.rowIndex;
   const x = this.cellIndex;
