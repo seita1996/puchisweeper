@@ -114,6 +114,7 @@ function leftClicked() {
   if (!data.length) {
     startTime = Date.now()
     timer()
+    gameInfo.style.display = "block"
     for (let i = 0; i < h; i++) {
       data[i] = Array(w).fill(0)
     }
