@@ -10,10 +10,15 @@ btn.addEventListener("click", init);
 const text = document.getElementById("text");
 const board = document.getElementById("board");
 const bombCount = document.querySelector(".bombCount");
-const result = document.getElementById("result");
+const finmessage = document.getElementById("finmessage")
 const time = document.getElementById("time");
 
+// sound
 let puchiAudio = new Audio("sounds/puchisound.mp3")
+
+// modal
+const modal = document.getElementById('easyModal')
+const buttonClose = document.getElementsByClassName('modalClose')[0]
 
 // 画面サイズを取得し、敷き詰めるプチプチと爆弾の数を決める
 function calcParams() {
@@ -45,7 +50,7 @@ function init() {
   w = wNum // 横のマスの数
   bomb = bombNum // 爆弾の数
   if (h * w - 9 < bomb) {
-    result.textContent = "エラー：爆弾の数が正しく入力されていません。";
+    finmessage.textContent = "エラー：爆弾の数が正しく入力されていません。"
     return;
   }
   data = [];
@@ -53,7 +58,7 @@ function init() {
   board.innerHTML = "";
   board.style.pointerEvents = "auto";
   clearTimeout(timeoutId);
-  result.textContent = "";
+  finmessage.textContent = ""
   count = bomb;
   bombCount.textContent = count;
   time.textContent = "000";
@@ -129,7 +134,8 @@ function leftClicked() {
       }
     }
     board.style.pointerEvents = "none";
-    result.textContent = "GAME OVER";
+    finmessage.textContent = "GAME OVER"
+    modalOpen()
     clearTimeout(timeoutId);
     return;
   }
@@ -152,7 +158,8 @@ function leftClicked() {
       }
     }
     board.style.pointerEvents = "none";
-    result.textContent = "CLEAR!!";
+    finmessage.textContent = "CLEAR 🎉"
+    modalOpen()
     clearTimeout(timeoutId);
     return;
   }
@@ -236,4 +243,25 @@ function timer() {
   timeoutId = setTimeout(() => {
     timer();
   }, 1000);
+}
+
+
+// Modal
+// ゲーム終了時
+function modalOpen() {
+  modal.style.display = 'block'
+}
+
+// バツ印がクリックされた時
+buttonClose.addEventListener('click', modalClose)
+function modalClose() {
+  modal.style.display = 'none'
+}
+
+// モーダルコンテンツ以外がクリックされた時
+addEventListener('click', outsideClose)
+function outsideClose(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none'
+  }
 }
