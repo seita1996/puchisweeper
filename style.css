@@ -213,4 +213,17 @@ footer {
   cursor: pointer;
 }
 
+#sharebtn {
+  width: 100%;
+  margin: 3px auto;
+  padding: 2px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border: solid 1px black;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* modal */

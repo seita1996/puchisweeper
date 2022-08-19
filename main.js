@@ -4,6 +4,7 @@ let data = [] // 爆弾が置いてある場所を管理 1=爆弾、0=何もな�
 let h, w, bomb, count
 let startTime // 測定開始時間
 let timeoutId
+let shareData
 
 const startbtn = document.getElementById("startbtn")
 startbtn.addEventListener("click", init)
@@ -137,6 +138,7 @@ function leftClicked() {
     }
     board.style.pointerEvents = "none"
     finmessage.textContent = "GAME OVER"
+    shareData = generateShareData(bomb, "失敗")
     modalOpen()
     clearTimeout(timeoutId)
     return
@@ -161,6 +163,7 @@ function leftClicked() {
     }
     board.style.pointerEvents = "none"
     finmessage.textContent = "CLEAR 🎉"
+    shareData = generateShareData(bomb, "成功")
     modalOpen()
     clearTimeout(timeoutId)
     return
@@ -273,3 +276,23 @@ function outsideClose(e) {
     modal.style.display = 'none'
   }
 }
+
+// Share
+function generateShareData(bombNum, successOrFailure) {
+  return {
+    title: 'ぷちぷち',
+    text: `ぷちぷちで暇つぶし。ぷちぷちの中に潜んだ${bombNum}個の爆弾処理に${successOrFailure}しました。あなたもぷちぷちチャレンジ！`,
+    url: 'https://puchisweeper.pages.dev',
+  }
+}
+
+const sharebtn = document.getElementById('sharebtn')
+
+// Must be triggered some kind of "user activation"
+sharebtn.addEventListener('click', async () => {
+  try {
+    await navigator.share(shareData)
+  } catch(e) {
+    console.log('Error: ' + e)
+  }
+})
