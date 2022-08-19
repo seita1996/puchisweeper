@@ -81,7 +81,7 @@ td {
   text-align: center;
   background-image: url(images/puchi50alive.png);
   background-repeat: no-repeat;
-  opacity: .9;
+  opacity: 1;
 }
 .open {
   /* background: #e6e6e6; */
