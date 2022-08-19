@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
-
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "M PLUS 1p";
   background-color: #edf1f1;
   margin: 0;
 }
@@ -116,7 +113,7 @@ td {
 /* header */
 
 .title {
-  font-family: 'Potta One', cursive;
+  font-family: "M PLUS 1p";
   text-align: center;
 }
 
