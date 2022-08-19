@@ -281,9 +281,9 @@ function outsideClose(e) {
 // Share
 function generateShareData(bombNum, successOrFailure) {
   return {
-    title: 'ぷちぷち',
+    title: 'ぷちぷち。',
     text: `ぷちぷちで暇つぶし。ぷちぷちの中に潜んだ${bombNum}個の爆弾処理に${successOrFailure}しました。あなたもぷちぷちチャレンジ！`,
-    url: 'https://puchisweeper.pages.dev',
+    url: 'https://puchisweeper.seita.work',
   }
 }
 
