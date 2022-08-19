@@ -15,11 +15,35 @@ const time = document.getElementById("time");
 
 let puchiAudio = new Audio("sounds/puchisound.mp3")
 
+// 画面サイズを取得し、敷き詰めるプチプチと爆弾の数を決める
+function calcParams() {
+  // ウィンドウの幅と高さを取得
+  const clientWidth = document.documentElement.clientWidth
+  const clientHeight = document.documentElement.clientHeight
+
+  // headerとfooterの高さを取得
+  const headerHeight = document.getElementById('header').clientHeight
+  const footerHeight = document.getElementById('footer').clientHeight
+  console.log("clientHeight", clientHeight, "headerHeight", headerHeight, "footerHeight", footerHeight)
+
+  // 横方向・縦方向に配置可能なプチプチの数、爆弾の数を計算
+  const wNum = Math.floor(clientWidth / 52)
+  const hNum = Math.floor((clientHeight - headerHeight - footerHeight) / 52)
+  const bombNum = Math.floor(wNum * hNum / 4) // セル数の1/4を爆弾に
+  console.log("wNum", wNum, "hNum", hNum, "bombNum", bombNum)
+  return {
+    wNum,
+    hNum,
+    bombNum
+  }
+}
+
 // 初期化
 function init() {
-  h = Number(document.getElementById("h").value); // 縦のマスの数
-  w = Number(document.getElementById("w").value); // 横のマスの数
-  bomb = Number(document.getElementById("b").value); // 爆弾の数
+  const { wNum, hNum, bombNum } = calcParams()
+  h = hNum // 縦のマスの数
+  w = wNum // 横のマスの数
+  bomb = bombNum // 爆弾の数
   if (h * w - 9 < bomb) {
     result.textContent = "エラー：爆弾の数が正しく入力されていません。";
     return;

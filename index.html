@@ -11,43 +11,31 @@
 </head>
 
 <body>
-  <div class="header">
-    <h1 class="title">Puchi!</h1>
-  </div>
-    <main>
-        <div id="setting">
-            W
-            <input type="number" id="w" value="6" min="2" max="50">
-            H
-            <input type="number" id="h" value="9" min="2" max="25">
-            B
-            <input type="number" id="b" value="10" min="1" max="1250">
-            <span class="bombCount">0</span>
+  <header id="header">
+    <div>
+      <h1 class="title">Puchi!</h1>
+    </div>
+    <div>
+      <span class="bombCount">0</span>
+        <div id="btn">
+            START
         </div>
-        <div id="setting2">
-            <div id="btn">
-                START
-            </div>
-            <span id="time" class="timer">000</span>
-        </div>
-        <table id="board">
-        </table>
-        <h3 id="result"></h3>
-        <div id="text">
-            <h3>
-                <設定>
-            </h3>
-            <p>W: 横のマスの数</p>
-            <p>H: 縦のマスの数</p>
-            <p>B: 爆弾の数</p>
-            <h3>
-                <操作>
-            </h3>
-            <p>左クリック: マスを開ける</p>
-            <p>右クリック: <span class="flag"></span>マークを付ける</p>
-        </div>
-    </main>
-  <footer>
+        <span id="time" class="timer">000</span>
+    </div>
+  </header>
+  <main>
+    <table id="board">
+    </table>
+    <h3 id="result"></h3>
+    <div id="text">
+      <h3>
+        ぷちぷちを楽しもう！
+      </h3>
+      <p>暇つぶしに</p>
+      <p>ストレス発散に</p>
+    </div>
+  </main>
+  <footer id="footer">
     <div>
       <span>
         © 2022 Seitaro
