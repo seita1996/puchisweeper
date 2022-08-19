@@ -93,7 +93,7 @@ function leftClicked() {
   puchiAudio.play()
 
   // iOS/Androidで次回再生が安定しないので初期化
-  // puchiAudio = new Audio( puchiAudio.src );
+  puchiAudio = new Audio( puchiAudio.src );
 
   const y = this.parentNode.rowIndex;
   const x = this.cellIndex;
