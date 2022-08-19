@@ -13,6 +13,8 @@ const bombCount = document.querySelector(".bombCount");
 const result = document.getElementById("result");
 const time = document.getElementById("time");
 
+const puchiAudio = new Audio("sounds/puchisound.mp3")
+
 // 初期化
 function init() {
   h = Number(document.getElementById("h").value); // 縦のマスの数
@@ -60,6 +62,9 @@ function putBomb() {
 
 // 左クリック マスを空ける
 function leftClicked() {
+  // プチ音を鳴らす
+  puchiAudio.play();
+
   const y = this.parentNode.rowIndex;
   const x = this.cellIndex;
   // すでに空いているマスや旗が置いてあったら何もしない
