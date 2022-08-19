@@ -86,12 +86,12 @@ td {
   animation: fadein 0.3s;
 }
 .bomb {
-  background: red;
+  background-image: url(images/puchi50dead.png);
+  background-blend-mode: exclusion;
   animation: fadein 1s infinite;
 }
 .bomb::before {
-  font-family: "Material Icons";
-  content: "\ea0b";
+  content: url(images/bomb-icon.svg);
 }
 .clear {
   background: pink;
@@ -103,8 +103,7 @@ td {
 }
 .bombCount::before {
   font-size: 24px;
-  font-family: "Material Icons";
-  content: "\ea0b";
+  content: url(images/bomb-icon.svg);
 }
 @keyframes fadein {
   0% {
