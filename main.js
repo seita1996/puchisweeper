@@ -5,9 +5,11 @@ let h, w, bomb, count;
 let startTime; // 測定開始時間
 let timeoutId;
 
-const btn = document.getElementById("btn");
-btn.addEventListener("click", init);
-const text = document.getElementById("text");
+const startbtn = document.getElementById("startbtn")
+startbtn.addEventListener("click", init)
+const restartbtn = document.getElementById("restartbtn")
+restartbtn.addEventListener("click", init)
+const text = document.getElementById("welcome");
 const board = document.getElementById("board");
 const bombCount = document.querySelector(".bombCount");
 const finmessage = document.getElementById("finmessage")
@@ -254,6 +256,12 @@ function modalOpen() {
 
 // バツ印がクリックされた時
 buttonClose.addEventListener('click', modalClose)
+function modalClose() {
+  modal.style.display = 'none'
+}
+
+// リスタートボタンがクリックされた時
+restartbtn.addEventListener('click', modalClose)
 function modalClose() {
   modal.style.display = 'none'
 }

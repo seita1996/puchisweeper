@@ -16,25 +16,23 @@ main {
   margin-top: 20px;
 }
 
-/* setting */
-#text {
+/* welcome */
+#welcome {
   width: 290px;
   margin: 0 auto;
   text-align: center;
-  border: solid 1px black;
-  border-radius: 5px;
 }
-#text h1 {
+#welcome h1 {
   color: yellowgreen;
   margin: 0;
 }
-#text h3 {
+#welcome h3 {
   margin: 0;
 }
-#text p {
+#welcome p {
   margin: 3px 0;
 }
-#btn {
+#startbtn {
   width: 100%;
   margin: 3px auto;
   padding: 2px;
@@ -202,6 +200,19 @@ footer {
 .modal-body {
   padding: 10px 20px;
   color: black;
+}
+
+#restartbtn {
+  width: 100%;
+  margin: 3px auto;
+  padding: 2px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border: solid 1px black;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* modal */
