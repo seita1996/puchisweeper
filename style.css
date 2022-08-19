@@ -74,12 +74,13 @@ main {
   /* background: yellowgreen; */
 }
 td {
-  border: solid 3px white;
+  /* border: solid 3px white; */
   width: 50px;
   height: 50px;
   font-weight: bold;
   text-align: center;
-  background-image: url(images/puchi50.png);
+  background-image: url(images/puchi50alive.png);
+  background-repeat: no-repeat;
   opacity: .5;
 }
 .open {
