@@ -138,3 +138,23 @@ td {
 }
 
 /* header */
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  background-color: wheat;
+}
+
+.socialicon {
+  margin-right: 5px;
+  width: 20px;
+  cursor: pointer;
+}
+
+/* footer */
