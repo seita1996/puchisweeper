@@ -85,19 +85,17 @@ td {
 }
 .bomb {
   background-image: url(images/puchi50dead.png);
-  background-blend-mode: exclusion;
   animation: fadein 1s infinite;
 }
 .bomb::before {
   content: url(images/bomb-icon.svg);
 }
 .clear {
-  background: pink;
+  background-image: url(images/puchi50alive.png);
   animation: fadein 5s infinite;
 }
 .clear::before {
-  font-family: "Material Icons";
-  content: "\e545";
+  content: "🎉";
 }
 .bombCount::before {
   font-size: 24px;
