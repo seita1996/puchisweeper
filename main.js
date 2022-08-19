@@ -13,7 +13,7 @@ const bombCount = document.querySelector(".bombCount");
 const result = document.getElementById("result");
 const time = document.getElementById("time");
 
-const puchiAudio = new Audio("sounds/puchisound.mp3")
+let puchiAudio = new Audio("sounds/puchisound.mp3")
 
 // 初期化
 function init() {
@@ -64,6 +64,9 @@ function putBomb() {
 function leftClicked() {
   // プチ音を鳴らす
   puchiAudio.play();
+
+  // iOS/Androidで次回再生が安定しないので初期化
+  puchiAudio = new Audio( puchiAudio.src );
 
   const y = this.parentNode.rowIndex;
   const x = this.cellIndex;
