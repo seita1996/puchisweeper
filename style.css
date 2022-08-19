@@ -1,46 +1,80 @@
+html {
+  height: 100%;
+}
 body {
   font-family: "M PLUS 1p";
-  background-color: #edf1f1;
+  background-color: #eff0f3;
   margin: 0;
+  height: 100%;
 }
 h1 {
   margin: 0;
   padding: 10px;
-  color: white;
+  color: #0d0d0d;
+  font-weight: 400;
+}
+h2 {
   font-weight: 400;
 }
 main {
   margin-top: 20px;
 }
+a {
+  color: #0d0d0d;
+  text-decoration: none;
+}
 
 /* welcome */
 #welcome {
-  width: 290px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 50px;
   text-align: center;
 }
 #welcome h1 {
-  color: yellowgreen;
+  color: #d9376e;
+  font-size: 6vw;
   margin: 0;
 }
-#welcome h3 {
+#welcome h2 {
+  color: #ff8e3c;
+  font-size: 4vw;
   margin: 0;
+  margin-top: 100px;
 }
 #welcome p {
+  color: #2a2a2a;
+  font-size: 3vw;
   margin: 3px 0;
 }
 #startbtn {
-  width: 100%;
-  margin: 3px auto;
-  padding: 2px;
+  width: 350px;
+  margin: 100px auto;
+  padding: 10px;
   font-weight: bold;
   text-align: center;
-  color: white;
-  border: solid 1px black;
-  background: black;
+  color: #0d0d0d;
+  border: solid 1px #ff8e3c;
+  background: #ff8e3c;
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+  #welcome h1 {
+    font-size: 8vw;
+  }
+  #welcome h2 {
+    font-size: 6vw;
+  }
+  #welcome p {
+    font-size: 5vw;
+  }
+}
+
+/* welcome */
+
 .timer::before {
   line-height: 30px;
   font-size: 24px;
@@ -112,15 +146,19 @@ td {
 
 /* header */
 
-.title {
-  font-family: "M PLUS 1p";
-  text-align: center;
-}
-
 header {
-  background-color: darkolivegreen;
+  background-color: #eff0f3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#title {
+  margin-left: 10px;
+}
+
+#gameInfo {
+  margin-right: 30px;
 }
 
 /* header */
@@ -128,13 +166,13 @@ header {
 /* footer */
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: sticky;
+  top: 100vh;
   width: 100%;
   padding-top: 5px;
   display: flex;
   justify-content: center;
-  background-color: wheat;
+  background-color: #eff0f3;
 }
 
 .socialicon {
@@ -160,7 +198,7 @@ footer {
 }
 
 .modal-content {
-  background-color: #f4f4f4;
+  background-color: #eff0f3;
   margin: 20% auto;
   width: 50%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
@@ -178,7 +216,7 @@ footer {
 }
 
 .modal-header {
-  background: lightblue;
+  background: #eff0f3;
   padding: 3px 15px;
   display: flex;
   justify-content: space-between;
@@ -194,33 +232,45 @@ footer {
 
 .modal-body {
   padding: 10px 20px;
-  color: black;
+  color: #0d0d0d;
+  background: #fffffe;
+  display: flex;
+  justify-content: space-between;
 }
 
 #restartbtn {
-  width: 100%;
-  margin: 3px auto;
-  padding: 2px;
+  width: 250px;
+  margin: 50px auto;
+  padding: 10px;
   font-weight: bold;
   text-align: center;
-  color: white;
-  border: solid 1px black;
-  background: black;
+  color: #0d0d0d;
+  border: solid 1px #ff8e3c;
+  background: #ff8e3c;
   border-radius: 5px;
   cursor: pointer;
 }
 
 #sharebtn {
-  width: 100%;
-  margin: 3px auto;
-  padding: 2px;
+  width: 250px;
+  margin: 50px auto;
+  padding: 10px;
   font-weight: bold;
   text-align: center;
   color: white;
-  border: solid 1px black;
-  background: black;
+  border: solid 1px #d9376e;
+  background: #d9376e;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-content {
+    width: 80%
+  }
+  .modal-body {
+    flex-direction: column;
+  }
 }
 
 /* modal */
