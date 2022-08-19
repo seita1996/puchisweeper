@@ -3,7 +3,7 @@
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
-  background-color: rgb(231, 231, 231);
+  background-color: #edf1f1;
   margin: 0;
 }
 h1 {
@@ -81,7 +81,7 @@ td {
   text-align: center;
   background-image: url(images/puchi50alive.png);
   background-repeat: no-repeat;
-  opacity: .5;
+  opacity: .9;
 }
 .open {
   /* background: #e6e6e6; */
