@@ -139,7 +139,7 @@ function leftClicked() {
     }
     board.style.pointerEvents = "none"
     finmessage.textContent = "GAME OVER"
-    shareData = generateShareData(bomb, "失敗")
+    shareData = generateShareData(time.textContent)
     modalOpen()
     clearTimeout(timeoutId)
     return
@@ -164,7 +164,7 @@ function leftClicked() {
     }
     board.style.pointerEvents = "none"
     finmessage.textContent = "CLEAR 🎉"
-    shareData = generateShareData(bomb, "成功")
+    shareData = generateShareData(time.textContent)
     modalOpen()
     clearTimeout(timeoutId)
     return
@@ -279,10 +279,10 @@ function outsideClose(e) {
 }
 
 // Share
-function generateShareData(bombNum, successOrFailure) {
+function generateShareData(sec) {
   return {
     title: 'ぷちぷち。',
-    text: `ぷちぷちで暇つぶし。ぷちぷちの中に潜んだ${bombNum}個の爆弾処理に${successOrFailure}しました。あなたもぷちぷちチャレンジ！`,
+    text: `ぷちぷちで暇つぶし。\n${sec}秒の暇つぶしができました。\nあなたもぷちぷちチャレンジ！`,
     url: 'https://puchisweeper.seita.work',
   }
 }
