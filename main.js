@@ -37,7 +37,7 @@ function calcParams() {
   // 横方向・縦方向に配置可能なプチプチの数、爆弾の数を計算
   const wNum = Math.floor(clientWidth / 52)
   const hNum = Math.floor((clientHeight - headerHeight - footerHeight) / 52)
-  const bombNum = Math.floor(wNum * hNum / 4) // セル数の1/4を爆弾に
+  const bombNum = Math.floor(wNum * hNum / 6) // セル数の1/6を爆弾に
   console.log("wNum", wNum, "hNum", hNum, "bombNum", bombNum)
   return {
     wNum,
