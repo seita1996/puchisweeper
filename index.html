@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://puchisweeper.seita.work" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ぷちぷち。" />
+    <meta property="og:description" content="ぷちぷちで暇つぶし。簡単な操作で爽快感を味わいましょう。PC・タブレット・スマホ対応。" />
+    <meta property="og:site_name" content="ぷちぷち。" />
+    <meta property="og:image" content="https://puchisweeper.seita.work/images/puchipuchi-share.png" />
     <title>ぷちぷち。</title>
     <meta name="description" content="ぷちぷちで暇つぶし。簡単な操作で爽快感を味わいましょう。PC・タブレット・スマホ対応。" />
     <link rel="stylesheet" href="style.css">
@@ -25,22 +31,6 @@
   <main>
     <table id="board">
     </table>
-    <div id="easyModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 id="finmessage"></h1>
-          <span class="modalClose">×</span>
-        </div>
-        <div class="modal-body">
-          <div id="restartbtn">
-            もういちど、ぷちぷちする
-          </div>
-          <div id="sharebtn">
-            結果をシェアする
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="welcome">
       <h1>
         ハロー、ぷちぷち。
@@ -59,6 +49,22 @@
       <p>あらゆるデバイスで。</p>
       <div id="startbtn">
         今すぐ、ぷちぷちする。
+      </div>
+    </div>
+    <div id="easyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="finmessage"></h1>
+          <span class="modalClose">×</span>
+        </div>
+        <div class="modal-body">
+          <div id="restartbtn">
+            もういちど、ぷちぷちする
+          </div>
+          <div id="sharebtn">
+            結果をシェアする
+          </div>
+        </div>
       </div>
     </div>
   </main>
