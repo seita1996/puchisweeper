@@ -1,5 +1,7 @@
 # ぷちぷち。
 
+<img src="images/puchipuchi-share.png">
+
 [第3回ツクってアソぶハッカソン](https://protopedia.net/event/41)エントリーのためのネタ作品です。
 
 テーマは
