@@ -289,7 +289,6 @@ function generateShareData(sec) {
 
 const sharebtn = document.getElementById('sharebtn')
 
-// Must be triggered some kind of "user activation"
 sharebtn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
