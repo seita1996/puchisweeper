@@ -282,7 +282,7 @@ function outsideClose(e) {
 function generateShareData(sec) {
   return {
     title: 'ぷちぷち。',
-    text: `ぷちぷちで暇つぶし。\n${sec}秒の暇つぶしができました。\nあなたもぷちぷちチャレンジ！`,
+    text: `ぷちぷちで暇つぶし。${sec}秒の暇つぶしができました。あなたもぷちぷちチャレンジ！ #ツクアソ #ぷちぷち`,
     url: 'https://puchisweeper.seita.work',
   }
 }
