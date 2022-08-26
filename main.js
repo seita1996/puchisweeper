@@ -244,7 +244,7 @@ function countOpenCell() {
 // ストップウォッチ
 function timer() {
   const d = new Date(Date.now() - startTime)
-  const s = String(d.getSeconds()).padStart(3, "0")
+  const s = String(d.getSeconds() + d.getMinutes() * 60).padStart(3, "0")
   time.textContent = `${s}`
   timeoutId = setTimeout(() => {
     timer()
