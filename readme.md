@@ -13,3 +13,9 @@
 のはずが、実は頭を使うマインスイーパー。
 
 https://puchisweeper.seita.work/
+
+---
+
+特別賞をいただきました
+
+https://protopedia.net/prototype/3175
