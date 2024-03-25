@@ -12,7 +12,7 @@
 
 のはずが、実は頭を使うマインスイーパー。
 
-https://puchisweeper.seita.work/
+https://puchisweeper.seitaro.work/
 
 ---
 
